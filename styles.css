@@ -1,0 +1,164 @@
+* {
+    font-family: monospace;
+    
+}
+body {
+    background: #ECE6C2;
+}
+#name {
+    margin-top: 5%;
+    display: block;
+    height: 75px;
+    width: 700px;
+    margin-bottom: 5%;
+    font-size: 20px;
+    font-family: monospace;
+    padding-left: 20px;
+    border-radius: 10px;
+    border: none;
+    margin: 3% auto;
+
+
+}
+#schedule {
+    display: block;
+    height: 500px;
+    width: 700px;
+    font-family: monospace;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 30px;
+    border: none;
+    margin: 3% auto;
+    
+
+
+}
+#submit {
+    display: block;
+    font-family: monospace;
+    height: 60px;
+    width: 400px;
+    background: #6f5643;
+    color: #ECE6C2;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    margin: 3% auto;
+
+}
+#main {
+    display: grid;
+    grid-template-rows: 64% 12% 12% 12%;
+    grid-template-areas: "classes inyourclass teacher course";
+}
+#classes {
+    display: grid;
+    grid-area: classes;
+    height: 700px;
+}
+
+#people {
+    display: grid;
+    grid-area: inyourclass;
+}
+
+#search {
+    width: 200px;
+    height: 3vh;
+    border-radius: 8px;
+    border: none;
+    padding-left: 10px;
+    background: #6f5643;
+    color: #ECE6C2;
+}
+#search::placeholder {
+    color: #ECE6C2;
+
+}
+#teacher {
+    display: grid;
+    grid-area: teacher;
+}
+
+#course{
+    display: grid;
+    grid-area: course;
+}
+
+#sem1 {
+    background: #6f5643;
+    border-radius: 8px;
+    color: #ECE6C2;
+    padding: 10px;
+    margin-top: 2vh;
+    height: 30vh;
+    overflow: scroll;
+}
+#sem2 {
+    background: #6f5643;
+    border-radius: 8px;
+    color: #ECE6C2;
+    padding: 10px;
+    margin-top: 2vh;
+    height: 30vh;
+    overflow: scroll;
+
+
+
+}
+#peopleContent {
+    background: #6f5643;
+    color: #ECE6C2;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 20px;
+    height: 79vh;
+    overflow: auto;
+}
+#teacherContent {
+    background: #6f5643;
+    color: #ECE6C2;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 20px;
+    height: 79vh;
+    overflow: auto;
+}
+#courseContent {
+    background: #6f5643;
+    color: #ECE6C2;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 20px;
+    height: 79vh;
+    overflow: auto;
+}
+.frame {
+    overflow-y: auto;
+}
+
+.frame::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.frame::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+.frame::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, .5);
+}
+.result {
+    width: 200px;
+    background: #6f5643;
+    border-radius: 6px;
+    height: 20px;
+    color: #ECE6C2;
+}
+
+#searchResults {
+    height: 10vh;
+}
