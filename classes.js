@@ -83,13 +83,34 @@ get(child(database, `data/${name}/${"Semester One"}`)).then((snapshot) => {
                     let teacher  = elements[1] + " " + elements[2]
                     console.log(period, teacher)
                     for (let key in inf2){
-                        if (inf2[key]["Semester One"][period]["teacher"] == teacher){
+                        if (period == "3b" && inf2[key]["Semester One"][period] == undefined){
+                        }
+                        else if (period == "3a" && inf2[key]["Semester One"][period] == undefined){
+
+                        }
+                        else if (period == "7b" && inf2[key]["Semester One"][period] == undefined){
+                        }
+                        else if (period == "7a" && inf2[key]["Semester One"][period] == undefined){
+                        }
+                        else if (inf2[key]["Semester One"][period]["teacher"] == teacher){
                             let p1 = document.createElement("p1")
                             p1.setAttribute("style", "display:block; font-size: 16px; margin-top: 20px")
                             p1.textContent = key
                             peopleContent.appendChild(p1)
                         }
                         for (let inner in inf2[key]["Semester One"]){
+                            if (inner == "3b" && inf2[key]["Semester One"][inner] == undefined){
+                                continue;
+                            }
+                            if (inner == "3a" && inf2[key]["Semester One"][inner] == undefined){
+                                continue;
+                            }
+                            if (inner == "7b" && inf2[key]["Semester One"][inner] == undefined){
+                                continue;
+                            }
+                            if (inner == "7a" && inf2[key]["Semester One"][inner] == undefined){
+                                continue;
+                            }
                             if (inf2[key]["Semester One"][inner]["teacher"] == teacher){
                                 let p1 = document.createElement("p1")
                                 p1.setAttribute("style", "display:block; font-size: 16px; margin-top: 20px")
@@ -98,6 +119,18 @@ get(child(database, `data/${name}/${"Semester One"}`)).then((snapshot) => {
                             }
                         }
                         for (let inner in inf2[key]["Semester One"]){
+                            if (inner == "3b" && inf2[key]["Semester One"][inner] == undefined){
+                                continue;
+                            }
+                            if (inner == "3a" && inf2[key]["Semester One"][inner] == undefined){
+                                continue;
+                            }
+                            if (inner == "7b" && inf2[key]["Semester One"][inner] == undefined){
+                                continue;
+                            }
+                            if (inner == "7a" && inf2[key]["Semester One"][inner] == undefined){
+                                continue;
+                            }
                             if (inf2[key]["Semester One"][inner]["class"] == p.dataset.class){
                                 let p1 = document.createElement("p1")
                                 p1.setAttribute("style", "display:block; font-size: 16px; margin-top: 20px")
@@ -126,9 +159,10 @@ get(child(database, `data/${name}/${"Semester One"}`)).then((snapshot) => {
         p.textContent = i + "\t" + inf[i]["class"] + ` (${inf[i]["teacher"]})`
         sem2.appendChild(p)
         p.id = i + ` ${inf[i]["teacher"]}`
+        console.log(inf[i])
         p.dataset.class = inf[i]["class"]
         p.addEventListener("click", function(){
-            console.log(p.getAttribute("class"))
+            console.log(p.dataset.class)
             peopleClass.textContent = "People in your " + inf[i]["class"]+ " period " + i
             peopleTeacher.textContent =  "People taking this course with " + inf[i]["teacher"]
             peopleCourse.textContent =  "Everyone in course " + inf[i]["class"]
@@ -145,13 +179,34 @@ get(child(database, `data/${name}/${"Semester One"}`)).then((snapshot) => {
                     let teacher  = elements[1] + " " + elements[2]
                     console.log(period, teacher)
                     for (let key in inf2){
-                        if (inf2[key]["Semester Two"][period]["teacher"] == teacher){
+                        if (period == "3b" && inf2[key]["Semester One"][period] == undefined){
+                        }
+                        else if (period == "3a" && inf2[key]["Semester One"][period] == undefined){
+
+                        }
+                        else if (period == "7b" && inf2[key]["Semester One"][period] == undefined){
+                        }
+                        else if (period == "7a" && inf2[key]["Semester One"][period] == undefined){
+                        }
+                        else if (inf2[key]["Semester One"][period]["teacher"] == teacher){
                             let p1 = document.createElement("p1")
                             p1.setAttribute("style", "display:block; font-size: 16px; margin-top: 20px")
                             p1.textContent = key
                             peopleContent.appendChild(p1)
                         }
                         for (let inner in inf2[key]["Semester Two"]){
+                            if (inner == "3b" && inf2[key]["Semester One"][inner] == undefined){
+                                continue;
+                            }
+                            if (inner == "3a" && inf2[key]["Semester One"][inner] == undefined){
+                                continue;
+                            }
+                            if (inner == "7b" && inf2[key]["Semester One"][inner] == undefined){
+                                continue;
+                            }
+                            if (inner == "7a" && inf2[key]["Semester One"][inner] == undefined){
+                                continue;
+                            }
                             if (inf2[key]["Semester One"][inner]["teacher"] == teacher){
                                 let p1 = document.createElement("p1")
                                 p1.setAttribute("style", "display:block; font-size: 16px; margin-top: 20px")
@@ -160,6 +215,18 @@ get(child(database, `data/${name}/${"Semester One"}`)).then((snapshot) => {
                             }
                         }
                         for (let inner in inf2[key]["Semester Two"]){
+                            if (inner == "3b" && inf2[key]["Semester One"][inner] == undefined){
+                                continue;
+                            }
+                            if (inner == "3a" && inf2[key]["Semester One"][inner] == undefined){
+                                continue;
+                            }
+                            if (inner == "7b" && inf2[key]["Semester One"][inner] == undefined){
+                                continue;
+                            }
+                            if (inner == "7a" && inf2[key]["Semester One"][inner] == undefined){
+                                continue;
+                            }
                             if (inf2[key]["Semester One"][inner]["class"] == p.dataset.class){
                                 let p1 = document.createElement("p1")
                                 p1.setAttribute("style", "display:block; font-size: 16px; margin-top: 20px")
