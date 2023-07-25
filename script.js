@@ -28,7 +28,11 @@ const submit = document.getElementById("submit")
 submit.addEventListener("click", function(){
     let student = name.value
     if (student == ""){
-        alert("Enter a student name!")
+        alert("Enter your name!")
+        return
+    }
+    if (!(student.includes(" "))){
+        alert("Enter your full name!")
         return
     }
     console.log(student)
