@@ -117,6 +117,7 @@ body {
     margin-left: 20px;
     height: 81vh;
     overflow: auto;
+    width: 20vw;
 }
 #teacherContent {
     background: #6f5643;
@@ -126,6 +127,8 @@ body {
     margin-left: 20px;
     height: 81vh;
     overflow: auto;
+    width: 20vw;
+
 }
 #courseContent {
     background: #6f5643;
@@ -135,6 +138,8 @@ body {
     margin-left: 20px;
     height: 81vh;
     overflow: auto;
+    width: 20vw;
+
 }
 .frame {
     overflow-y: auto;
