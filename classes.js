@@ -212,11 +212,17 @@ const searchResults = document.getElementById("searchResults")
 search.addEventListener("input", function(){
     removeAllChildNodesTrue(searchResults)
     let currSearch = search.value
+    if (currSearch.trim() == ""){
+        let p = document.createElement("p")
+        p.textContent = "Click on a course to view roster info!"
+        searchResults.appendChild(p)
+        return
+    }
     //console.log(search.value)
     let matches = 0
     for (let key in data){
         if (key.slice(0, currSearch.length).toLowerCase() == currSearch.toLowerCase()){
-            if (matches >= 3){
+            if (matches >= 12){
                 return
             }
             console.log(key)
@@ -232,5 +238,11 @@ search.addEventListener("input", function(){
             searchResults.appendChild(div)
             matches++
         }
+    }
+    if (matches == 0){
+        let p = document.createElement("p")
+        p.textContent = "No results found!"
+        searchResults.appendChild(p)
+        return
     }
 })
