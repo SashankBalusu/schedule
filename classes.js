@@ -157,19 +157,19 @@ get(child(database, `data/${name}/${"Semester One"}`)).then((snapshot) => {
                     let teacher  = elements[1] + " " + elements[2]
                     console.log(period, teacher)
                     for (let key in inf2){
-                        if (inf2[key]["Semester One"][period] == undefined){
+                        if (inf2[key]["Semester Two"][period] == undefined){
                         }
-                        else if (inf2[key]["Semester One"][period]["teacher"] == teacher){
+                        else if (inf2[key]["Semester Two"][period]["teacher"] == teacher){
                             let p1 = document.createElement("p1")
                             p1.setAttribute("style", "display:block; font-size: 16px; margin-top: 20px")
                             p1.textContent = key
                             peopleContent.appendChild(p1)
                         }
                         for (let inner in inf2[key]["Semester Two"]){
-                            if (inf2[key]["Semester One"][inner] == undefined){
+                            if (inf2[key]["Semester Two"][inner] == undefined){
                                 continue;
                             }
-                            if (inf2[key]["Semester One"][inner]["teacher"] == teacher){
+                            if (inf2[key]["Semester Two"][inner]["teacher"] == teacher){
                                 let p1 = document.createElement("p1")
                                 p1.setAttribute("style", "display:block; font-size: 16px; margin-top: 20px")
                                 p1.textContent = key
@@ -177,10 +177,10 @@ get(child(database, `data/${name}/${"Semester One"}`)).then((snapshot) => {
                             }
                         }
                         for (let inner in inf2[key]["Semester Two"]){
-                            if (inf2[key]["Semester One"][inner] == undefined){
+                            if (inf2[key]["Semester Two"][inner] == undefined){
                                 continue;
                             }
-                            if (inf2[key]["Semester One"][inner]["class"] == p.dataset.class){
+                            if (inf2[key]["Semester Two"][inner]["class"] == p.dataset.class){
                                 let p1 = document.createElement("p1")
                                 p1.setAttribute("style", "display:block; font-size: 16px; margin-top: 20px")
                                 p1.textContent = key
