@@ -83,14 +83,9 @@ get(child(database, `data/${name}/${"Semester One"}`)).then((snapshot) => {
                     let teacher  = elements[1] + " " + elements[2]
                     console.log(period, teacher)
                     for (let key in inf2){
-                        if (period == "3b" && inf2[key]["Semester One"][period] == undefined){
-                        }
-                        else if (period == "3a" && inf2[key]["Semester One"][period] == undefined){
-
-                        }
-                        else if (period == "7b" && inf2[key]["Semester One"][period] == undefined){
-                        }
-                        else if (period == "7a" && inf2[key]["Semester One"][period] == undefined){
+                        console.log(period)
+                        console.log(inf2[key]["Semester One"])
+                        if (inf2[key]["Semester One"][period] == undefined){
                         }
                         else if (inf2[key]["Semester One"][period]["teacher"] == teacher){
                             let p1 = document.createElement("p1")
@@ -99,18 +94,10 @@ get(child(database, `data/${name}/${"Semester One"}`)).then((snapshot) => {
                             peopleContent.appendChild(p1)
                         }
                         for (let inner in inf2[key]["Semester One"]){
-                            if (inner == "3b" && inf2[key]["Semester One"][inner] == undefined){
+                            if (inf2[key]["Semester One"][inner] == undefined){
                                 continue;
                             }
-                            if (inner == "3a" && inf2[key]["Semester One"][inner] == undefined){
-                                continue;
-                            }
-                            if (inner == "7b" && inf2[key]["Semester One"][inner] == undefined){
-                                continue;
-                            }
-                            if (inner == "7a" && inf2[key]["Semester One"][inner] == undefined){
-                                continue;
-                            }
+
                             if (inf2[key]["Semester One"][inner]["teacher"] == teacher){
                                 let p1 = document.createElement("p1")
                                 p1.setAttribute("style", "display:block; font-size: 16px; margin-top: 20px")
@@ -119,16 +106,7 @@ get(child(database, `data/${name}/${"Semester One"}`)).then((snapshot) => {
                             }
                         }
                         for (let inner in inf2[key]["Semester One"]){
-                            if (inner == "3b" && inf2[key]["Semester One"][inner] == undefined){
-                                continue;
-                            }
-                            if (inner == "3a" && inf2[key]["Semester One"][inner] == undefined){
-                                continue;
-                            }
-                            if (inner == "7b" && inf2[key]["Semester One"][inner] == undefined){
-                                continue;
-                            }
-                            if (inner == "7a" && inf2[key]["Semester One"][inner] == undefined){
+                            if (inf2[key]["Semester One"][inner] == undefined){
                                 continue;
                             }
                             if (inf2[key]["Semester One"][inner]["class"] == p.dataset.class){
@@ -179,14 +157,7 @@ get(child(database, `data/${name}/${"Semester One"}`)).then((snapshot) => {
                     let teacher  = elements[1] + " " + elements[2]
                     console.log(period, teacher)
                     for (let key in inf2){
-                        if (period == "3b" && inf2[key]["Semester One"][period] == undefined){
-                        }
-                        else if (period == "3a" && inf2[key]["Semester One"][period] == undefined){
-
-                        }
-                        else if (period == "7b" && inf2[key]["Semester One"][period] == undefined){
-                        }
-                        else if (period == "7a" && inf2[key]["Semester One"][period] == undefined){
+                        if (inf2[key]["Semester One"][period] == undefined){
                         }
                         else if (inf2[key]["Semester One"][period]["teacher"] == teacher){
                             let p1 = document.createElement("p1")
@@ -195,16 +166,7 @@ get(child(database, `data/${name}/${"Semester One"}`)).then((snapshot) => {
                             peopleContent.appendChild(p1)
                         }
                         for (let inner in inf2[key]["Semester Two"]){
-                            if (inner == "3b" && inf2[key]["Semester One"][inner] == undefined){
-                                continue;
-                            }
-                            if (inner == "3a" && inf2[key]["Semester One"][inner] == undefined){
-                                continue;
-                            }
-                            if (inner == "7b" && inf2[key]["Semester One"][inner] == undefined){
-                                continue;
-                            }
-                            if (inner == "7a" && inf2[key]["Semester One"][inner] == undefined){
+                            if (inf2[key]["Semester One"][inner] == undefined){
                                 continue;
                             }
                             if (inf2[key]["Semester One"][inner]["teacher"] == teacher){
@@ -215,16 +177,7 @@ get(child(database, `data/${name}/${"Semester One"}`)).then((snapshot) => {
                             }
                         }
                         for (let inner in inf2[key]["Semester Two"]){
-                            if (inner == "3b" && inf2[key]["Semester One"][inner] == undefined){
-                                continue;
-                            }
-                            if (inner == "3a" && inf2[key]["Semester One"][inner] == undefined){
-                                continue;
-                            }
-                            if (inner == "7b" && inf2[key]["Semester One"][inner] == undefined){
-                                continue;
-                            }
-                            if (inner == "7a" && inf2[key]["Semester One"][inner] == undefined){
+                            if (inf2[key]["Semester One"][inner] == undefined){
                                 continue;
                             }
                             if (inf2[key]["Semester One"][inner]["class"] == p.dataset.class){
