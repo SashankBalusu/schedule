@@ -35,6 +35,7 @@ submit.addEventListener("click", function(){
         alert("Enter your full name!")
         return
     }
+    student = student.trim()
     console.log(student)
     let sched = schedule.value.trim().split(("\n"))
     console.log(sched)
