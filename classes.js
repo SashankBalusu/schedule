@@ -242,7 +242,79 @@ search.addEventListener("input", function(){
     if (matches == 0){
         let p = document.createElement("p")
         p.textContent = "No results found!"
+        p.setAttribute("style", "padding-left: 10px")
+
         searchResults.appendChild(p)
+        return
+    }
+})
+const findCompare = document.getElementById("findCompare")
+const compareSearchResults = document.getElementById("compareSearchResults")
+const compareContent = document.getElementById("compareContent")
+findCompare.addEventListener("input", function(){
+    removeAllChildNodesTrue(compareSearchResults)
+    let currSearch = findCompare.value
+    //console.log(search.value)
+    let matches = 0
+    for (let key in data){
+        if (key.slice(0, currSearch.length).toLowerCase() == currSearch.toLowerCase()){
+            if (matches >= 5){
+                return
+            }
+            console.log(key)
+            let div = document.createElement("div")
+            let p = document.createElement("p")
+            p.textContent = key
+            p.setAttribute("style", "padding-left: 10px")
+            div.appendChild(p)
+            div.classList.add("result")
+            div.addEventListener("click", function(){
+                removeAllChildNodesTrue(compareSearchResults)
+                removeAllChildNodesTrue(compareContent)
+
+
+                let h2 = document.createElement("h2")
+                h2.textContent = "Semester One"
+                h2.classList.add("header")
+
+                compareContent.appendChild(h2)
+                for (let innerkey in data[name]["Semester One"]){
+                    if (data[key]["Semester One"][innerkey] == undefined){
+                        continue
+                    }
+                        if (data[name]["Semester One"][innerkey]["teacher"] == data[key]["Semester One"][innerkey]["teacher"]){
+                            let p = document.createElement("p")
+                            p.textContent = `Period: ${innerkey}, ${data[name]["Semester One"][innerkey]["class"]} (${data[name]["Semester One"][innerkey]["teacher"]})`
+                            compareContent.appendChild(p)
+                        }
+
+                }
+                let h22 = document.createElement("h2")
+                h22.textContent = "Semester Two"
+                h22.classList.add("header")
+                compareContent.appendChild(h22)
+                for (let innerkey in data[name]["Semester Two"]){
+                    
+                    if (data[key]["Semester Two"][innerkey] == undefined){
+                        continue
+                    }
+                        if (data[name]["Semester Two"][innerkey]["teacher"] == data[key]["Semester Two"][innerkey]["teacher"]){
+                            let p = document.createElement("p")
+                            p.textContent = `Period: ${innerkey}, ${data[name]["Semester Two"][innerkey]["class"]} (${data[name]["Semester Two"][innerkey]["teacher"]})`
+                            compareContent.appendChild(p)
+                        }
+
+                }
+            })
+            compareSearchResults.appendChild(div)
+            matches++
+        }
+    }
+    if (matches == 0){
+        let p = document.createElement("p")
+        p.textContent = "No results found!"
+        p.setAttribute("style", "padding-left: 10px")
+        compareSearchResults.appendChild(p)
         return
     }
 })
